@@ -1,7 +1,10 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState, useEffect } from 'react';
 import { add, divide, multiply, subtract } from './calculator';
 
 function App() {
+  if (true) {
+    useEffect(() => console.log("hi"), [])
+  }
   const xRef = useRef<HTMLInputElement>(null);
   const yRef = useRef<HTMLInputElement>(null);
   const [x, setX] = useState<number | undefined>(0);
